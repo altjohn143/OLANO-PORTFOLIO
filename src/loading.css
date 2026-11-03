@@ -1,0 +1,47 @@
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.loading-screen {
+  min-height: 100vh;
+  padding: 28px clamp(24px, 5vw, 72px) 60px;
+  background: #f5f2ea;
+}
+
+.skeleton {
+  background: linear-gradient(100deg, #e4e1d9 25%, #f2f0e9 45%, #e4e1d9 65%);
+  background-size: 220% 100%;
+  animation: shimmer 1.45s ease-in-out infinite;
+}
+
+.skeleton-nav { display: flex; justify-content: space-between; align-items: center; }
+.skeleton-logo { width: 65px; height: 25px; border-radius: 4px; }
+.skeleton-links { width: 230px; height: 13px; border-radius: 8px; }
+.skeleton-button { width: 104px; height: 36px; border-radius: 2px; }
+.skeleton-hero { display: grid; grid-template-columns: 1fr .85fr; align-items: center; gap: 60px; max-width: 1160px; margin: 80px auto 55px; }
+.skeleton-copy { display: grid; gap: 16px; }
+.skeleton-eyebrow { width: 180px; height: 12px; border-radius: 8px; }
+.skeleton-heading { width: min(100%, 540px); height: clamp(125px, 16vw, 190px); border-radius: 8px; }
+.skeleton-text { width: 80%; height: 42px; border-radius: 8px; }
+.skeleton-actions { display: flex; gap: 14px; margin-top: 5px; }
+.skeleton-action { width: 136px; height: 48px; border-radius: 3px; }
+.skeleton-link { width: 72px; height: 16px; border-radius: 8px; align-self: center; }
+.skeleton-art { height: 420px; border-radius: 220px 220px 8px 8px; }
+.skeleton-rule { max-width: 1160px; height: 1px; margin: 0 auto 48px; }
+.skeleton-projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 1160px; margin: auto; }
+.skeleton-project { height: 340px; border-radius: 5px; }
+
+@media (max-width: 720px) {
+  .loading-screen { padding: 22px 16px 45px; }
+  .skeleton-links, .skeleton-button { display: none; }
+  .skeleton-hero { grid-template-columns: 1fr; gap: 34px; margin: 58px auto 42px; }
+  .skeleton-heading { height: 128px; }
+  .skeleton-art { height: 310px; }
+  .skeleton-projects { grid-template-columns: 1fr; }
+  .skeleton-project:not(:first-child) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton { animation: none; }
+}

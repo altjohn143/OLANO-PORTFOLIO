@@ -1,0 +1,31 @@
+:root {
+  --ink: #111923;
+  --cream: #ebe6dc;
+  --acid: #c56a3d;
+  --muted: #61707a;
+}
+
+html, body { background: #111923; }
+main { background: #ebe6dc; }
+.hero-art { background: #1b2933 !important; border: 1px solid #2e414d; }
+.hero-portrait { mix-blend-mode: normal; filter: contrast(1.06) saturate(.82); }
+.profile-label { background: #c56a3d; color: #111923; }
+.button { background: #111923; }
+.button b { color: #c56a3d; }
+.nav-cta b, .text-link b { color: #c56a3d; }
+.ticker b { color: #c56a3d; }
+.about { background: #111923; }
+.capstone-panel { background: #17232d; }
+.capstone-kicker, .capstone-role b { color: #c56a3d; }
+.capstone-actions a { border-color: #c56a3d; }
+.capstone-actions a:first-child { background: #c56a3d; }
+.project-visual { filter: saturate(.66) contrast(1.16) brightness(.78); }
+.project:hover .project-visual { filter: saturate(.8) contrast(1.18) brightness(.9); }
+.project-num { background: #111923; color: #ebe6dc; }
+.tool-card { background: #e4ded3; border-color: #bdb5a8; }
+.tool-card span { color: #a94f2f; }
+footer { background: #111923; color: #ebe6dc; }
+footer .kicker, footer h2, footer .footer-mail, footer .footer-bottom, footer .footer-bottom a { color: #ebe6dc; }
+footer .footer-mail { border-color: #c56a3d; }
+footer .footer-bottom { border-color: #52606a; }
+.back-top { background: #c56a3d; color: #111923; }

@@ -1,0 +1,9 @@
+.mobile-menu-trigger { display: none; border: 0; background: transparent; color: var(--ink); font: 11px 'DM Mono'; letter-spacing: .7px; cursor: pointer; }
+@media (max-width: 720px) {
+  .nav { position: relative; z-index: 20; }
+  .nav .nav-cta { display: none; }
+  .mobile-menu-trigger { display: block; }
+  .navlinks.is-open { position: absolute; top: 62px; right: 0; display: grid; gap: 0; width: min(260px, calc(100vw - 32px)); padding: 8px; background: #111923; box-shadow: 0 14px 30px rgba(0,0,0,.2); }
+  .navlinks.is-open a { padding: 14px 12px; color: #ebe6dc; border-bottom: 1px solid #35434d; }
+  .navlinks.is-open a:last-child { border: 0; }
+}

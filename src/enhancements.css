@@ -1,0 +1,29 @@
+@keyframes titleReveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marqueeLoop {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.scroll-progress { position: fixed; inset: 0 auto auto 0; z-index: 100; width: var(--scroll-progress, 0%); height: 3px; background: #c56a3d; box-shadow: 0 1px 14px rgba(197, 106, 61, .65); transition: width 90ms linear; }
+.skill-marquee { overflow: hidden; margin-top: 10px; background: #111923; color: #ebe6dc; }
+.skill-marquee-track { display: flex; width: max-content; animation: marqueeLoop 22s linear infinite; }
+.skill-marquee-set { display: flex; flex: none; align-items: center; gap: 24px; padding: 15px 12px; font: 11px 'DM Mono'; letter-spacing: 1px; white-space: nowrap; }
+.skill-marquee-set b { color: #c56a3d; font-size: 14px; }
+.mail-toast { position: fixed; right: 22px; bottom: 78px; z-index: 60; display: flex; align-items: center; gap: 9px; padding: 12px 15px; color: #ebe6dc; background: #111923; border-left: 3px solid #c56a3d; font: 12px 'DM Mono'; box-shadow: 0 14px 30px rgba(0,0,0,.22); animation: titleReveal 260ms ease both; }
+.mail-toast b { color: #c56a3d; }
+.reveal-title { opacity: 0; }
+[data-reveal].is-visible .reveal-title { animation: titleReveal 820ms cubic-bezier(.2,.75,.25,1) both; }
+.project[data-reveal].is-visible { transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(var(--tilt-lift, 0)); transform-style: preserve-3d; will-change: transform; }
+.project[data-reveal].is-visible:hover { --tilt-lift: -7px; }
+.project-visual { transform: translateZ(0); }
+.hero-portrait { transform: translateY(var(--portrait-parallax, 0px)) scale(1.04); transition: transform 120ms linear; will-change: transform; }
+.capstone-panel { overflow: hidden; }
+.capstone-image { transform: translateY(var(--capstone-parallax, 0px)) scale(1.035); transition: transform 120ms linear; will-change: transform; }
+.capstone { padding-bottom: 42px; }
+.work { padding-top: 64px; }
+@media (prefers-reduced-motion: reduce) { .scroll-progress { transition: none; }.reveal-title { opacity: 1; }.hero-portrait, .capstone-image { transform: none; }.skill-marquee-track { animation: none; } }
+@media (max-width: 720px) { .capstone { padding-bottom: 30px; }.work { padding-top: 48px; } }

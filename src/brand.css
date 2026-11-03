@@ -1,0 +1,5 @@
+.brand { display: inline-flex; align-items: center; gap: 9px; letter-spacing: 0 !important; }
+.brand-mark { width: 31px; height: 31px; }
+.brand-wordmark { display: grid; line-height: 1; }
+.brand-wordmark strong { font: 700 13px 'DM Sans', sans-serif; letter-spacing: 1.5px; }
+.brand-wordmark small { margin-top: 4px; color: #677079; font: 8px 'DM Mono'; letter-spacing: 1.2px; }
